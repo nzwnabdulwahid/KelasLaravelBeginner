@@ -19,13 +19,13 @@ class PizzaController extends Controller
     	// $pizza->mainIngredient = "Squirell";
     	// $pizza->save();
 
-    	$arr = Pizza2::where('name', 'Ayam')->get();
+    	$arr = Pizza2::where('name', 'Ayam')->where('id', 2)->get();
     	echo $arr;
-    	// foreach ($arr as $obj) {
-    	// 	$obj->name = "Ayam";
-    	// 	$obj->save();
+    	foreach ($arr as $obj) {
+    		$obj->name = "Ayam";
+    		// $obj->save();
 
-    	// 	// $obj->delete() to delete;
-    	// }
+    		$obj->delete() ;
+    	}
     }
 }
